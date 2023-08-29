@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Karla:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #ffffff;
+}
+
+/* Navbar start */
+.nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: 1px 0 5px grey;
+}
+.link {
+  margin-left: 50px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Karla;
+  font-size: 20px;
+}
+/* Navbar end */
+
+/* Home start */
+.home {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 300px;
+  gap: 50px;
+}
+/* Home end */
+
+/* BookDetails start */
+.book-details {
+  margin: 20px;
+  padding: 10px;
+  line-height: 24px;
+  background: #ffffff;
+  font-family: Inter;
+  font-weight: 300;
+  width: 600px;
+  box-shadow: 2px 2px 6px grey;
+  border-radius: 5px;
+  transition: transform 0.2s ease-out;
+}
+.book-details:hover {
+  background: orangered;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.book-details h4 {
+  text-transform: uppercase;
+}
+.strong {
+  font-family: Inter;
+  font-weight: 500;
+}
+/* BookDetails end */
+
+/* BookForm start */
+.create {
+  display: flex;
+  flex-direction: column;
+  font-size: 23px;
+  margin-top: 20px;
+}
+.create h3 {
+  font-family: Karla;
+  margin-bottom: 10px;
+}
+.create label {
+  font-family: Inter;
+  font-size: 18px;
+}
+.create input {
+  margin-bottom: 10px;
+  height: 34px;
+  width: 250px;
+  padding: 7px;
+  border: none;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 5px;
+}
+.create button {
+  margin-top: 10px;
+  height: 40px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  background: #6161ff;
+  color: #fff;
+  font-family: Inter;
+  cursor: pointer;
+  transition: background 0.2s linear;
+}
+.create button:hover {
+  background: #fff;
+  color: #6161ff;
+  border: 1.5px solid #6161ff;
+}
+.error-box {
+  width: 250px;
+  margin-top: 10px;
+  border: 1px solid red;
+  color: rgb(107, 1, 1);
+  background: rgb(255, 197, 197);
+  padding: 7px;
+  font-family: Inter;
+  font-size: 15px;
+}
+input.error {
+  border: 1px solid red;
+  box-shadow: 0 0 2px rgb(255, 191, 191);
+}
+/* BookForm end */
