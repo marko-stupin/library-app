@@ -52,6 +52,7 @@ const BookForm = () => {
         onChange={(e) => setTitle(e.target.value)}
         value={title}
         className={emptyFields.includes("title") ? "error" : ""}
+        id="book-title-field"
       />
 
       <label>Author:</label>
@@ -60,6 +61,7 @@ const BookForm = () => {
         onChange={(e) => setAuthor(e.target.value)}
         value={author}
         className={emptyFields.includes("author") ? "error" : ""}
+        id="book-author-field"
       />
 
       <label>Copies:</label>
@@ -68,6 +70,7 @@ const BookForm = () => {
         onChange={(e) => setCopies(e.target.value)}
         value={copies}
         className={emptyFields.includes("copies") ? "error" : ""}
+        id="book-copies-field"
       />
 
       <button>Add Book</button>
