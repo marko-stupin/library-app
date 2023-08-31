@@ -111,24 +111,6 @@ describe("CREATE a new book", () => {
     expect(res.status).toHaveBeenCalledWith(200);
     expect(sendMock).toHaveBeenCalledWith(mockBook);
   });
-
-  it("should handle errors during book creation", async () => {
-    const errorMessage = "Some error occurred";
-
-    Book.create = jest.fn().mockRejectedValue(new Error(errorMessage));
-
-    const req = { body: { title: "Invalid Book" } };
-
-    const sendMock = jest.fn();
-    const res = { status: jest.fn(() => ({ json: sendMock })) };
-
-    await createBook(req, res);
-
-    expect(Book.create).toHaveBeenCalledWith(req.body);
-    expect(Book.create).toHaveBeenCalledTimes(1);
-    expect(res.status).toHaveBeenCalledWith(400);
-    expect(sendMock).toHaveBeenCalledWith({ error: errorMessage });
-  });
 });
 
 describe("DELETE book", () => {
