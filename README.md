@@ -2,7 +2,7 @@
 
 node v18.17.1
 
-### How to start the app
+## How to start the app
 
 1. Clone the repo and install all of the dependencies in frontend and backend folder with `npm i`.
 
@@ -10,13 +10,13 @@ node v18.17.1
 
 3. Open up another terminal and cd into frotnend folder and type `npm start`.
 
-### How to run tests
+## How to run tests
 
-`1. Backend tests ( Jest )`
+### 1. Backend tests ( Jest )
 
 - Run `npm test` in the terminal and make sure you are in the backend folder.
 
-`2. Frontend tests ( Selenium )`
+### 2. Frontend tests ( Selenium )
 
 - Download and install <a href="https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com">firefox</a> browser on your pc
 - Download `geckodriver.exe` from this <a href="https://www.npmjs.com/package/selenium-webdriver">link</a> you will get a zip file
