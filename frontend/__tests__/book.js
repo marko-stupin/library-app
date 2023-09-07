@@ -25,7 +25,7 @@ describe("Add book and dispay it on the page", function () {
     await driver.quit();
   });
 
-  it("should sheck if the bookDetails card is valid", async function () {
+  it("should check if the bookDetails card is valid", async function () {
     // launch the browser
     let driver = await new Builder().forBrowser("firefox").build();
 
