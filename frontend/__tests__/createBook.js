@@ -3,7 +3,7 @@ const assert = require("assert");
 var should = require("mocha");
 
 describe("Add book and dispay it on the page", function () {
-  it("should successfully add a book to the app & check if the bookDetails card is valid", async function () {
+  it("should successfully add a book to the app and check if the bookDetails card is valid", async function () {
     // launch the browser
     let driver = await new Builder().forBrowser("firefox").build();
 
