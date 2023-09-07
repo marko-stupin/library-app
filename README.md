@@ -15,6 +15,7 @@ node v18.17.1
 ### 1. Backend tests ( Jest )
 
 - Run `npm test` in the terminal and make sure you are in the backend folder.
+- Run `npm run coverage` in the terminal to see the test coverage
 
 ### 2. Frontend tests ( Selenium )
 
