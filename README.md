@@ -30,4 +30,4 @@ node v18.17.1
 - Go back to vscode and run `npm test` in the terminal and make sure you are in the frontend folder.
 - In order to see test report run `npm run report`.
 
-> If you have any problems make sure that you're using the node version i provided above, to change your node version use <a href="https://github.com/coreybutler/nvm-windows target="\_blank" " >node version manager</a> (nvm).
+> If you have any problems make sure that you're using the node version i provided above, to change your node version use <a href="https://github.com/coreybutler/nvm-windows" target="\_blank" >node version manager</a> (nvm).
