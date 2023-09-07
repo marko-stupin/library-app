@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2023-09-07T00:48:37.297Z",
-    "end": "2023-09-07T00:48:51.758Z",
-    "duration": 14461,
+    "start": "2023-09-07T07:55:08.694Z",
+    "end": "2023-09-07T07:55:34.974Z",
+    "duration": 26280,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "13b1410f-bf84-447a-8d79-5dfb8c0197ce",
+      "uuid": "2e598626-d9f4-44e5-990c-a27a59922205",
       "title": "",
       "fullFile": "C:\\Users\\marko\\Desktop\\library-app\\frontend\\__tests__\\book.js",
       "file": "\\__tests__\\book.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d261da8e-ddd3-4b91-b55d-b4134e84e876",
+          "uuid": "8557f2c1-3362-4e46-b115-808bc5f821fc",
           "title": "Add book and dispay it on the page",
           "fullFile": "C:\\Users\\marko\\Desktop\\library-app\\frontend\\__tests__\\book.js",
           "file": "\\__tests__\\book.js",
@@ -38,7 +38,7 @@
               "title": "should successfully add a book to the app",
               "fullTitle": "Add book and dispay it on the page should successfully add a book to the app",
               "timedOut": null,
-              "duration": 4739,
+              "duration": 15683,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,7 +47,7 @@
               "context": null,
               "code": "// launch the browser\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n// navigate to the app location\nawait driver.get(\"http://localhost:3000/\");\n// add a book\nawait driver\n  .findElement(By.id(\"book-title-field\"))\n  .sendKeys(\"Romeo & Juliet\");\nawait driver\n  .findElement(By.id(\"book-author-field\"))\n  .sendKeys(\"William Shakespeare\");\nawait driver\n  .findElement(By.id(\"book-copies-field\"))\n  .sendKeys(\"3\", Key.RETURN);\n// close the browser\nawait driver.quit();",
               "err": {},
-              "uuid": "b521e67a-6a2d-4fa8-b337-4f505340c5b2",
+              "uuid": "54d0f351-df19-44e9-94e6-b13ff2e8be92",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -56,7 +56,7 @@
               "title": "should check if the bookDetails card is valid",
               "fullTitle": "Add book and dispay it on the page should check if the bookDetails card is valid",
               "timedOut": null,
-              "duration": 4759,
+              "duration": 4869,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,7 +65,7 @@
               "context": null,
               "code": "// launch the browser\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n// navigate to the app location\nawait driver.get(\"http://localhost:3000/\");\n// asertion\nlet bookTitle = await driver\n  .findElement(By.xpath(\"(//div[@class='book-details']/h4)\"))\n  .getText();\nlet bookAuthor = await driver\n  .findElement(By.xpath(\"(//div[@class='book-details']/p[1])\"))\n  .getText();\nlet bookCopies = await driver\n  .findElement(By.xpath(\"(//div[@class='book-details']/p[2])\"))\n  .getText();\nassert.strictEqual(bookTitle, \"ROMEO & JULIET\");\nassert.strictEqual(bookAuthor, \"Author: William Shakespeare\");\nassert.strictEqual(bookCopies, \"Copies: 3\");\n// close the browser\nawait driver.quit();",
               "err": {},
-              "uuid": "cb81603d-7318-4076-a5a8-ca9b0e4beebd",
+              "uuid": "387f5593-a7ec-476f-9356-393dbc858daf",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -74,7 +74,7 @@
               "title": "should delete the book",
               "fullTitle": "Add book and dispay it on the page should delete the book",
               "timedOut": null,
-              "duration": 4524,
+              "duration": 5067,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,7 +83,7 @@
               "context": null,
               "code": "// launch the browser\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n// navigate to the app location\nawait driver.get(\"http://localhost:3000/\");\n// delete\nconst deleteBook = await driver.findElement(\n  By.xpath(\"(//div[@class='book-details']/h4)\")\n);\nawait deleteBook.click();\n// close the browser\nawait driver.quit();",
               "err": {},
-              "uuid": "0646ce9c-66f9-4888-a797-e2ecb9459bca",
+              "uuid": "072fa322-b193-4161-9f0f-9c689e1e2eaf",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -91,14 +91,14 @@
           ],
           "suites": [],
           "passes": [
-            "b521e67a-6a2d-4fa8-b337-4f505340c5b2",
-            "cb81603d-7318-4076-a5a8-ca9b0e4beebd",
-            "0646ce9c-66f9-4888-a797-e2ecb9459bca"
+            "54d0f351-df19-44e9-94e6-b13ff2e8be92",
+            "387f5593-a7ec-476f-9356-393dbc858daf",
+            "072fa322-b193-4161-9f0f-9c689e1e2eaf"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14022,
+          "duration": 25619,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
