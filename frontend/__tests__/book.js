@@ -3,7 +3,7 @@ const assert = require("assert");
 var should = require("mocha");
 
 describe("Add book and dispay it on the page", function () {
-  it("should successfully add a book to the app and check if the bookDetails card is valid", async function () {
+  it("should successfully add a book to the app", async function () {
     // launch the browser
     let driver = await new Builder().forBrowser("firefox").build();
 
@@ -21,6 +21,17 @@ describe("Add book and dispay it on the page", function () {
       .findElement(By.id("book-copies-field"))
       .sendKeys("3", Key.RETURN);
 
+    // close the browser
+    await driver.quit();
+  });
+
+  it("should sheck if the bookDetails card is valid", async function () {
+    // launch the browser
+    let driver = await new Builder().forBrowser("firefox").build();
+
+    // navigate to the app location
+    await driver.get("http://localhost:3000/");
+
     // asertion
     let bookTitle = await driver
       .findElement(By.xpath("(//div[@class='book-details']/h4)"))
@@ -35,6 +46,23 @@ describe("Add book and dispay it on the page", function () {
     assert.strictEqual(bookTitle, "ROMEO & JULIET");
     assert.strictEqual(bookAuthor, "Author: William Shakespeare");
     assert.strictEqual(bookCopies, "Copies: 3");
+
+    // close the browser
+    await driver.quit();
+  });
+
+  it("should delete the book", async function () {
+    // launch the browser
+    let driver = await new Builder().forBrowser("firefox").build();
+
+    // navigate to the app location
+    await driver.get("http://localhost:3000/");
+
+    // delete
+    const deleteBook = await driver.findElement(
+      By.xpath("(//div[@class='book-details']/h4)")
+    );
+    await deleteBook.click();
 
     // close the browser
     await driver.quit();
